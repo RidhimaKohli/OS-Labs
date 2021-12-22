@@ -1,0 +1,238 @@
+Enter number of process k
+3
+Enter Virtual address space : max number of pages :
+8
+Enter Physical address space : number of frames :
+6
+Enter size of TLB(should be less than number of frames):
+3
+Current process is: 1
+Current process requires 6 pages
+Reference String Generated : 7 1 4 6 7 1 0 0 2 1 5 4
+Free Frames : 3 4 5
+TLB : page - frame
+2 - 0
+3 - 1
+6 - 2
+
+Page Table : Page number - Validity (Only frames chosen for TLB are valid)
+0 - 1
+1 - 1
+2 - 1
+3 - 0
+4 - 0
+5 - 0
+Starting Process number : 0
+Process : 1 for page reference 7 , TLB miss -> Now check page_table
+TLB Miss with no page fault , free frame is available
+Used the new frame 3
+added 7 Current state of LRU:
+7
+Process : 1 for page reference 1 , TLB miss -> Now check page_table
+TLB Miss with no page fault , free frame is available
+Used the new frame 4
+added 1 Current state of LRU:
+1 7
+Process : 1 for page reference 4 , TLB miss -> Now check page_table
+TLB Miss with no page fault , free frame is available
+Used the new frame 5
+added 4 Current state of LRU:
+4 1 7
+Process : 1 for page reference 6 , TLB hit with frame no. 2
+Process : 1 for page reference 7 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 7 , TLB miss -> page table valid -> with frame no. 3
+
+Put 7 at top
+ Current state of LRU:
+7 4 1 
+Process : 1 for page reference 1 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 1 , TLB miss -> page table valid -> with frame no. 4
+
+Put 1 at top
+ Current state of LRU:
+1 7 4
+Process : 1 for page reference 0 , TLB miss -> Now check page_table
+Page fault!
+
+Deleted 4 Current state of LRU:
+0 1 7 
+Process : 1 for page reference 0 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 0 , TLB miss -> page table valid -> with frame no. 5
+Process : 1 for page reference 2 , TLB hit with frame no. 0
+Process : 1 for page reference 1 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 1 , TLB miss -> page table valid -> with frame no. 4
+
+Put 1 at top
+ Current state of LRU:
+1 0 7
+Process : 1 for page reference 5 , TLB miss -> Now check page_table
+Page fault!
+
+Deleted 7 Current state of LRU:
+5 1 0
+Process : 1 for page reference 4 , TLB miss -> Now check page_table
+Page fault!
+
+Deleted 0 Current state of LRU: 
+4 5 1
+Number of faults is for process  0 are 3
+Current process is: 2
+Current process requires 6 pages
+Reference String Generated : 0 1 3 0 1 0 3 2 3 3 1 7
+Free Frames : 3 4 5
+TLB : page - frame
+6 - 0
+5 - 1
+7 - 2
+
+Page Table : Page number - Validity (Only frames chosen for TLB are valid)
+0 - 1
+1 - 1
+2 - 1
+3 - 1
+4 - 1
+5 - 1
+Starting Process number : 1
+Process : 2 for page reference 0 , TLB miss -> Now check page_table
+TLB Miss with no page fault , free frame is available
+Used the new frame 3
+added 0 Current state of LRU:
+0 
+Process : 2 for page reference 1 , TLB miss -> Now check page_table
+TLB Miss with no page fault , free frame is available
+Used the new frame 4
+added 1 Current state of LRU:
+1 0
+Process : 2 for page reference 3 , TLB miss -> Now check page_table
+TLB Miss with no page fault , free frame is available
+Used the new frame 5
+added 3 Current state of LRU:
+3 1 0
+Process : 2 for page reference 0 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 2 for page reference 0 , TLB miss -> page table valid -> with frame no. 3
+
+Put 0 at top
+ Current state of LRU:
+0 3 1
+Process : 2 for page reference 1 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 2 for page reference 1 , TLB miss -> page table valid -> with frame no. 4
+
+Put 1 at top
+ Current state of LRU:
+1 0 3
+Process : 2 for page reference 0 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 2 for page reference 0 , TLB miss -> page table valid -> with frame no. 3
+
+Put 0 at top
+ Current state of LRU:
+0 1 3
+Process : 2 for page reference 3 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 2 for page reference 3 , TLB miss -> page table valid -> with frame no. 5
+
+Put 3 at top
+ Current state of LRU:
+3 0 1
+Process : 2 for page reference 2 , TLB miss -> Now check page_table
+Page fault!
+
+Deleted 1 Current state of LRU:
+2 3 0
+Process : 2 for page reference 3 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 2 for page reference 3 , TLB miss -> page table valid -> with frame no. 5
+
+Put 3 at top
+ Current state of LRU:
+3 2 0
+Process : 2 for page reference 3 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 2 for page reference 3 , TLB miss -> page table valid -> with frame no. 5
+Process : 2 for page reference 1 , TLB miss -> Now check page_table
+Page fault!
+
+Deleted 0 Current state of LRU:
+1 3 2
+Process : 2 for page reference 7 , TLB hit with frame no. 2
+Number of faults is for process  1 are 2
+Current process is: 1
+Current process requires 8 pages
+Reference String Generated : 7 2 2 6 2 1 3 7 4 7 6 4 4 5 3 3 
+Free Frames : 3 4 5
+TLB : page - frame
+1 - 0
+3 - 1
+6 - 2
+
+Page Table : Page number - Validity (Only frames chosen for TLB are valid)
+0 - 1
+1 - 1
+2 - 1
+3 - 1
+4 - 1
+5 - 1
+Starting Process number : 2
+Process : 1 for page reference 7 , TLB miss -> Now check page_table
+TLB Miss with no page fault , free frame is available
+Used the new frame 3
+added 7 Current state of LRU:
+7
+Process : 1 for page reference 2 , TLB miss -> Now check page_table
+TLB Miss with no page fault , free frame is available
+Used the new frame 4
+added 2 Current state of LRU:
+2 7
+Process : 1 for page reference 2 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 2 , TLB miss -> page table valid -> with frame no. 4
+Process : 1 for page reference 6 , TLB hit with frame no. 2
+Process : 1 for page reference 2 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 2 , TLB miss -> page table valid -> with frame no. 4
+Process : 1 for page reference 1 , TLB hit with frame no. 0
+Process : 1 for page reference 3 , TLB hit with frame no. 1
+Process : 1 for page reference 7 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 7 , TLB miss -> page table valid -> with frame no. 3
+
+Put 7 at top
+ Current state of LRU:
+7 2
+Process : 1 for page reference 4 , TLB miss -> Now check page_table
+TLB Miss with no page fault , free frame is available
+Used the new frame 5
+added 4 Current state of LRU:
+4 7 2
+Process : 1 for page reference 7 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 7 , TLB miss -> page table valid -> with frame no. 3
+
+Put 7 at top
+ Current state of LRU:
+7 4 2
+Process : 1 for page reference 6 , TLB hit with frame no. 2
+Process : 1 for page reference 4 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 4 , TLB miss -> page table valid -> with frame no. 5
+
+Put 4 at top
+ Current state of LRU:
+4 7 2
+Process : 1 for page reference 4 , TLB miss -> Now check page_table
+TLB Miss with no page fault
+Process : 1 for page reference 4 , TLB miss -> page table valid -> with frame no. 5
+Process : 1 for page reference 5 , TLB miss -> Now check page_table
+Page fault!
+
+Deleted 2 Current state of LRU:
+5 4 7
+Process : 1 for page reference 3 , TLB hit with frame no. 1
+Process : 1 for page reference 3 , TLB hit with frame no. 1
+Number of faults is for process  2 are 1

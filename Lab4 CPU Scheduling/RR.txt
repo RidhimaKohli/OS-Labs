@@ -1,0 +1,9 @@
+Process PID		ResponseT	WaitingT	TurnaroundT	(in seconds)
+80			0.000604	0.010722	0.012673
+Process PID		ResponseT	WaitingT	TurnaroundT	(in seconds)
+75			0.000652	3.665587	3.667841
+Process PID		ResponseT	WaitingT	TurnaroundT	(in seconds)
+74			0.000514	9.316071	9.318158
+Process PID		ResponseT	WaitingT	TurnaroundT	(in seconds)
+73			0.000605	9.317236	9.319420
+average values of response time , waiting time and turnaround time		0.000594	5.577404	5.579523
